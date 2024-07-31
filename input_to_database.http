@@ -1,0 +1,352 @@
+###CLIENT
+
+POST http://localhost:8080/client
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"firstName": "Mark", "lastName": "Novotny"}
+
+###
+
+POST http://localhost:8080/client
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"firstName": "James", "lastName": "New"}
+
+###
+
+POST http://localhost:8080/client
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"firstName": "James", "lastName": "New"}
+
+###
+
+GET http://localhost:8080/client/all
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/client/10
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/client/81
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+###
+
+PUT http://localhost:8080/client/14
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"firstName": "Jan", "lastName": "Novak"}
+
+###
+
+GET http://localhost:8080/client/all
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+###
+
+DELETE http://localhost:8080/client/6
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+###
+
+DELETE http://localhost:8080/client/7
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/client/all
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+###APARTMENT
+
+POST http://localhost:8080/apartment
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"price": 3000 , "disposition": "1+1", "equipmentsIDs": []}
+
+###
+
+POST http://localhost:8080/apartment
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"price": 3000 , "disposition": "2+1", "equipmentsIDs": []}
+
+###
+
+POST http://localhost:8080/apartment
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"price": 4500 , "disposition": "2+1", "equipmentsIDs": []}
+
+###
+
+POST http://localhost:8080/apartment
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"price": 3700 , "disposition": "2+1", "equipmentsIDs": []}
+
+###
+
+POST http://localhost:8080/apartment
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"price": 5700 , "disposition": "3+1", "equipmentsIDs": []}
+
+###
+
+GET http://localhost:8080/apartment/all
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/apartment?disposition=2%2B1
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/apartment?client=7
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/apartment/30
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/apartment/81
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+###
+
+PUT http://localhost:8080/apartment/32
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"price": 6700 , "disposition": "3+1", "equipmentsIDs": [40, 41]}
+
+###
+
+GET http://localhost:8080/apartment/all
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+###
+
+DELETE http://localhost:8080/apartment/6
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+###
+
+DELETE http://localhost:8080/apartment/60
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/apartment/all
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+###RESERVATION
+
+POST http://localhost:8080/reservation
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"from": "2020-01-01", "to": "2020-02-01", "reservationOfClientId": 7 , "reservationOfApartmentId": 32 }
+
+###
+
+POST http://localhost:8080/reservation
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"from": "2020-02-01", "to": "2020-03-01", "reservationOfClientId": 8 , "reservationOfApartmentId": 31 }
+
+###
+
+POST http://localhost:8080/reservation
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"from": "2020-02-01", "to": "2020-04-01", "reservationOfClientId": 13 , "reservationOfApartmentId": 32 }
+
+###
+
+POST http://localhost:8080/reservation
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"from": "2020-04-01", "to": "2020-08-01", "reservationOfClientId": 25 , "reservationOfApartmentId": 32 }
+
+###
+
+GET http://localhost:8080/reservation/all
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/reservation/68
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/reservation/81
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+###
+
+PUT http://localhost:8080/reservation/68
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"from": "2020-01-01", "to": "2020-03-04", "reservationOfClientId": 10 , "reservationOfApartmentId": 15 }
+
+###
+
+GET http://localhost:8080/reservation/all
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+###
+
+DELETE http://localhost:8080/reservation/6
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+###EQUIPMENT
+
+POST http://localhost:8080/equipment
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name": "lamp"}
+
+###
+
+POST http://localhost:8080/equipment
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name": "PC"}
+
+###
+
+POST http://localhost:8080/equipment
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name": "TV"}
+
+###
+
+GET http://localhost:8080/equipment/all
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/equipment/33
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+###
+
+PUT http://localhost:8080/equipment/41
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name": "LED-TV"}
+
+###
+
+GET http://localhost:8080/equipment/all
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+###
+
+DELETE http://localhost:8080/equipment/81
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/equipment/all
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json

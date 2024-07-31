@@ -1,3 +1,5 @@
+!Aplikace není funkční z důvodu odstranění některých částí a slouží pouze jako ukázka!
+
 1)do terminalu napiste "gradle build"
 
 2)do terminalu napiste "gradle bootJar"
